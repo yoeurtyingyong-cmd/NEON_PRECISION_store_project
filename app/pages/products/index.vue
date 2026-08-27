@@ -1,5 +1,5 @@
-<script> 
-definie
+<script setup lang="ts"> 
+
 </script>
 <template>    
 <ProductFilterSidebar/>
