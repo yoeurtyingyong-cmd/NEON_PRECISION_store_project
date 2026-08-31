@@ -1,90 +1,89 @@
 <template>
-    <div class=" rounded-2xl bg-[#111111] p-6 border border-zinc-800/80 shadow-2xl">
-      <!-- Section Header -->
-      <div class="flex items-center gap-3 mb-6">
-        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-800 text-xs font-semibold text-zinc-300">
-          2
-        </span>
-        <h2 class="text-xl font-bold tracking-tight text-white">
-          Payment Protocol
-        </h2>
+  <div class=" rounded-lg border border-[#242424] bg-[#111111] p-6">
+    <div class="flex items-center gap-3 pb-5 border-b border-[#242424]">
+      <div class="w-6 h-6 rounded-full bg-[#1e293b] flex items-center justify-center">
+        <span class="text-xs text-gray-300">2</span>
       </div>
-
-      <!-- Payment Options Container -->
-      <div class="space-y-3">
-        <!-- Credit / Debit Option (Selected) -->
-        <div class="rounded-xl border border-zinc-800 bg-[#161616] p-4">
-          <!-- Option Header -->
-          <label class="flex items-center justify-between cursor-pointer">
-            <div class="flex items-center gap-3">
-              <!-- Custom Radio Circle -->
-              <span class="relative flex h-4 w-4 items-center justify-center rounded-full border border-blue-500 bg-blue-600">
-                <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
-              </span>
-              <span class="text-sm font-semibold text-white">Credit / Debit</span>
+      <h2 class="text-[24px] font-bold text-gray-200">
+        Payment Protocol
+      </h2>
+    </div>
+    <div class="mt-3 space-y-3">
+      <div class="rounded-md border border-[#292929] bg-[#1b1b1b]">
+        <div class="flex items-center justify-between px-3 py-4 cursor-pointer">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-[#60a5fa] ring-2 ring-[#3b82f6]/40 shadow-[0_0_8px_#3b82f6]">
             </div>
-            <!-- Icon/Label Right -->
-            <span class="font-serif text-xs text-zinc-400">credit_card</span>
-          </label>
+            <span class="text-sm font-medium text-gray-200">
+              Credit / Debit
+            </span>
 
-          <!-- Expandable Card Inputs -->
-          <div class="mt-4 pl-3 border-l-2 border-zinc-800 space-y-3">
-            <div>
-              <input
-                v-model="paymentForm.cardNumber"
-                type="text"
-                placeholder="0000 0000 0000 0000"
-                class="w-full rounded-lg bg-[#0a0a0a] border border-zinc-800/60 px-4 py-3 text-xs font-mono text-zinc-300 placeholder-zinc-600 outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition"
-              />
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <input
-                v-model="paymentForm.expiry"
-                type="text"
-                placeholder="MM/YY"
-                class="w-full rounded-lg bg-[#0a0a0a] border border-zinc-800/60 px-4 py-3 text-xs text-zinc-300 placeholder-zinc-600 outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition"
-              />
-              <input
-                v-model="paymentForm.cvc"
-                type="text"
-                placeholder="CVC"
-                class="w-full rounded-lg bg-[#0a0a0a] border border-zinc-800/60 px-4 py-3 text-xs text-zinc-300 placeholder-zinc-600 outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition"
-              />
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+            stroke="#bdbdbd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="14" x="2" y="5" rx="2" />
+            <line x1="2" x2="22" y1="10" y2="10" />
+          </svg>
+
+        </div>
+        <div class="px-5 pb-5">
+          <div class="border-l-2 border-[#334155] pl-3">
+            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" class="w-full h-[38px]
+                                   rounded-md border border-[#292929] bg-black px-3 text-xs text-gray-300
+                                   placeholder:text-gray-500 outline-none focus:border-[#3b82f6] transition">
+            <!-- Expiry + CVC -->
+            <div class="grid grid-cols-2 gap-3 mt-3">
+
+              <input type="text" placeholder="MM/YY" maxlength="5" class="w-full h-[38px] rounded-md border border-[#292929]
+                                       bg-black px-3 text-sm text-gray-300 placeholder:text-gray-500 outline-none
+                                       focus:border-[#3b82f6] transition">
+              <input type="text" placeholder="CVC" maxlength="4" class="w-full h-[38px] rounded-md border border-[#292929]
+                                       bg-black px-3 text-sm text-gray-300 placeholder:text-gray-500 outline-none
+                                       focus:border-[#3b82f6] transition">
             </div>
           </div>
         </div>
-
-        <!-- Cryptocurrency Option -->
-        <div class="rounded-xl border border-zinc-800/60 bg-[#141414] p-4 transition hover:border-zinc-700">
-          <label class="flex items-center justify-between cursor-pointer">
-            <div class="flex items-center gap-3">
-              <span class="h-4 w-4 rounded-full border border-zinc-600 bg-zinc-300"></span>
-              <span class="text-sm font-semibold text-zinc-300">Cryptocurrency</span>
-            </div>
-            <span class="font-serif text-xs text-zinc-400">currency_bitcoin</span>
-          </label>
-        </div>
-
-        <!-- Digital Wallet Option -->
-        <div class="rounded-xl border border-zinc-800/60 bg-[#141414] p-4 transition hover:border-zinc-700">
-          <label class="flex items-center justify-between cursor-pointer">
-            <div class="flex items-center gap-3">
-              <span class="h-4 w-4 rounded-full border border-zinc-600 bg-zinc-300"></span>
-              <span class="text-sm font-semibold text-zinc-300">Digital Wallet</span>
-            </div>
-            <span class="font-serif text-xs text-zinc-400">account_balance_wallet</span>
-          </label>
-        </div>
       </div>
+      <button type="button" class="w-full h-[49px] rounded-md border border-[#292929]
+                       bg-[#1b1b1b] px-3 flex items-center justify-between hover:bg-[#202020] transition">
+        <div class="flex items-center gap-3">
+          <div class="w-3 h-3 rounded-full bg-white"></div>
+
+          <span class="text-sm font-medium text-gray-200">
+            Cryptocurrency
+          </span>
+
+        </div>
+
+
+        <!-- Bitcoin Icon -->
+        <span class="text-xl text-gray-400 font-bold">
+          ₿
+        </span>
+
+      </button>
+      <button type="button" class="w-full h-[49px] rounded-md border border-[#292929] bg-[#1b1b1b] px-3 flex items-center justify-between
+               hover:bg-[#202020] transition">
+        <div class="flex items-center gap-3">
+
+          <!-- Radio -->
+          <div class="w-3 h-3 rounded-full bg-white"></div>
+
+          <span class="text-sm font-medium text-gray-200">
+            Digital Wallet
+          </span>
+
+        </div>
+
+
+        <!-- Wallet Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#bdbdbd"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 7V4a1 1 0 0 0-1-1H5a3 3 0 0 0 0 6h15a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a3 3 0 0 1-3-3V6" />
+          <path d="M16 13h2" />
+        </svg>
+
+      </button>
     </div>
+  </div>
 </template>
-
-<script setup lang="ts">
-import { reactive } from 'vue'
-
-const paymentForm = reactive({
-  cardNumber: '',
-  expiry: '',
-  cvc: '',
-})
-</script>
