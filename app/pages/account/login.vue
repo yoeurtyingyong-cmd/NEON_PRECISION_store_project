@@ -14,7 +14,7 @@
                 <label for="email" class="block mb-2 text-sm font-semibold text-gray-900">
                     Email Address
                 </label>
-                <input id="email" type="email" value="admin@angkormass.com" placeholder="Enter your email"
+                <input id="email" type="email" placeholder="Enter your email"
                     class="w-full h-11 px-4 bg-blue-50 border border-blue-100 rounded-lg
                     text-sm text-gray-900 outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition">
             </div>
@@ -22,7 +22,7 @@
                 <label for="password" class="block mb-2 text-sm font-semibold text-gray-900">
                     Password
                 </label>
-                <input id="password" type="password" value="admin123" placeholder="Enter your password"
+                <input id="password" type="password" placeholder="Enter your password"
                     class="w-full h-11 px-4 bg-blue-50 border border-blue-100 rounded-lg
                     text-sm text-gray-900 outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition">
             </div>
