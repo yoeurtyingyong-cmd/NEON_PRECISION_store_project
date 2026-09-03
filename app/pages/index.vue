@@ -5,8 +5,8 @@
 <template>
     <div>
         <HomeHeroBanner/>
-        <HomeBestSellers/>
         <HomeCategoryGrid/>
+        <HomeBestSellers/>
         <HomeFeaturedProduct/>
         <HomeNewsletter/>
     </div>
