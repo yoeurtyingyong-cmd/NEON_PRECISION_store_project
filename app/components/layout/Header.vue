@@ -25,7 +25,7 @@ defineEmits(['toggle-mobile-menu'])
             <NuxtLink to="/cart" aria-label="Cart" class="text-white/85 hover:text-white transition-opacity">
                 <Icon name="mdi:cart-outline" class="w-6 h-6"/>
             </NuxtLink>
-            <NuxtLink to="/profile" aria-label="Profile" class="text-white/85 hover:text-white transition-opacity">
+            <NuxtLink to="/account/login" aria-label="Profile" class="text-white/85 hover:text-white transition-opacity">
                 <Icon name="mdi:account-outline" class="w-6 h-6"/>
             </NuxtLink>
 
