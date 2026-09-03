@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen w-full bg-[#05070B] text-white overflow-hidden flex items-center font-sans">
+  <div class="relative min-h-screen w-full bg-[#05070B] text-white overflow-hidden flex  font-sans ">
     <!-- Background Image / Overlay -->
     <div class="absolute inset-0 z-0">
       <!-- High-tech futuristic device background placeholder -->
