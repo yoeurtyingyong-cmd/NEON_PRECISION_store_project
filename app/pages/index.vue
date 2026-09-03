@@ -6,6 +6,7 @@
     <div>
         <HomeHeroBanner/>
         <HomeCategoryGrid/>
+        <HomeBestSellers/>
         <HomeFeaturedProduct/>
         <HomeNewsletter/>
     </div>
