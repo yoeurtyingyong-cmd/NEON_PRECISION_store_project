@@ -5,7 +5,6 @@
 <template>
     <div>
         <HomeHeroBanner/>
-        <HomeBestSellers/>
         <HomeCategoryGrid/>
         <HomeFeaturedProduct/>
         <HomeNewsletter/>
